@@ -1,11 +1,11 @@
-# DIP Image Viewer  
-## Developer Integration Guide (v2)
+## DIP Image Viewer  
+#### Developer Integration Guide (v2)
 
 ---
 
-# 🚀 Quick Start (VDP - 2 Minutes)
+## 🚀 Quick Start (VDP - 2 Minutes)
 
-### 1. Add Container
+###### 1. Add Container
 
 ```html
 <div id="dip-gallery"></div>
@@ -13,7 +13,7 @@
 
 ---
 
-### 2. Include Script
+###### 2. Include Script
 
 ```html
 <script src="https://assets.dealerimagepro.com/v4/photon360script.js"></script>
@@ -21,7 +21,7 @@
 
 ---
 
-### 3. Initialize Viewer
+###### 3. Initialize Viewer
 
 ```html
 <script>
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ---
 
-# 🧭 Overview
+## 🧭 Overview
 
 DIP Image Viewer replaces your existing vehicle gallery or slider with a hosted viewer.
 
@@ -58,7 +58,7 @@ Supports:
 
 ---
 
-# 🧠 Viewer Types
+## 🧠 Viewer Types
 
 | Use Case | Viewer |
 |----------|--------|
@@ -67,9 +67,9 @@ Supports:
 
 ---
 
-# 🧩 VDP Integration (Detail Page)
+## 🧩 VDP Integration (Detail Page)
 
-## Basic Example
+#### Basic Example
 
 ```javascript
 const viewer = window.DIP.Photon360VDP;
@@ -83,13 +83,13 @@ viewer.init({
 
 ---
 
-# 🧩 SRP Integration (Listing Page)
+## 🧩 SRP Integration (Listing Page)
 
 SRP works differently — it integrates into each vehicle card.
 
 ---
 
-## 🔧 Required Elements
+#### 🔧 Required Elements
 
 Each vehicle item must have:
 
@@ -99,7 +99,7 @@ Each vehicle item must have:
 
 ---
 
-## Example HTML Structure
+#### Example HTML Structure
 
 ```html
 <div class="vehicle-card">
@@ -115,7 +115,7 @@ Each vehicle item must have:
 
 ---
 
-## SRP Initialization Example
+#### SRP Initialization Example
 
 ```javascript
 const srpViewer = window.DIP.Photon360SRP;
@@ -131,7 +131,7 @@ srpViewer.init({
 
 ---
 
-## 🧠 How It Works
+#### 🧠 How It Works
 
 For each `.vehicle-card`:
 
@@ -141,9 +141,9 @@ For each `.vehicle-card`:
 
 ---
 
-# ⚙️ Configuration
+## ⚙️ Configuration
 
-## VDP (Basic)
+#### VDP (Basic)
 
 ```javascript
 viewer.init({
@@ -155,7 +155,7 @@ viewer.init({
 
 ---
 
-## SRP (Basic)
+#### SRP (Basic)
 
 ```javascript
 srpViewer.init({
@@ -169,7 +169,7 @@ srpViewer.init({
 
 ---
 
-## Advanced (VDP/SRP)
+#### Advanced (VDP/SRP)
 
 ```javascript
 viewer.init({
@@ -186,7 +186,7 @@ viewer.init({
 
 ---
 
-# 📌 Parameters
+## 📌 Parameters
 
 | Parameter | Required | Applies To | Description |
 |----------|----------|------------|------------|
@@ -203,7 +203,7 @@ viewer.init({
 
 ---
 
-### Notes
+###### Notes
 
 - Either `vin` or `stock` is required (VIN takes priority)  
 - `parentElement` must exist before initialisation  
@@ -212,7 +212,7 @@ viewer.init({
 
 ---
 
-# 📍 Selector Examples
+## 📍 Selector Examples
 
 ```javascript
 "#gallery"              // ID
@@ -222,7 +222,7 @@ viewer.init({
 
 ---
 
-# 🔄 Replacing Existing Gallery
+## 🔄 Replacing Existing Gallery
 
 Before initializing DIP:
 
@@ -232,7 +232,7 @@ Before initializing DIP:
 
 ---
 
-# 🖥 Features Included
+## 🖥 Features Included
 
 - Fullscreen  
 - Web Share API  
@@ -242,7 +242,7 @@ Before initializing DIP:
 
 ---
 
-# 🔁 SPA Compatibility
+## 🔁 SPA Compatibility
 
 Supports:
 
@@ -255,9 +255,9 @@ Call `init()` after component mount.
 
 ---
 
-# ⚠️ Common Issues
+## ⚠️ Common Issues
 
-### Viewer Not Loading
+###### Viewer Not Loading
 
 - Check Dealer ID  
 - Check VIN / Stock  
@@ -265,7 +265,7 @@ Call `init()` after component mount.
 
 ---
 
-### SRP Not Working
+###### SRP Not Working
 
 - Ensure selectors are correct  
 - Ensure elements exist inside each card  
@@ -273,14 +273,14 @@ Call `init()` after component mount.
 
 ---
 
-### Duplicate Viewer
+###### Duplicate Viewer
 
 - Avoid multiple init calls  
 - Destroy previous instance in SPA  
 
 ---
 
-# 🔍 Debug Mode
+## 🔍 Debug Mode
 
 ```javascript
 viewer.init({
@@ -293,7 +293,7 @@ viewer.init({
 
 ---
 
-# 🔐 Requirements
+## 🔐 Requirements
 
 - HTTPS required  
 - iframe allowed  
@@ -301,7 +301,7 @@ viewer.init({
 
 ---
 
-# 🆘 Support
+## 🆘 Support
 
 Provide:
 
@@ -312,7 +312,7 @@ Provide:
 
 ---
 
-# 🎯 Final Notes
+## 🎯 Final Notes
 
 - DIP does NOT support DOM scraping  
 - Integration must use explicit selectors  
